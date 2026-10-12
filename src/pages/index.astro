@@ -18,7 +18,7 @@ const info: {
   dim?: boolean;
   perDistro?: (system: System) => string;
 }[] = [
-  { k: "OS", perDistro: (s) => s.os },
+  { k: "OS", perDistro: (s) => s.nibiruname },
   { k: "Host", v: current.host },
   { k: "Kernel", perDistro: (s) => s.kernel },
   { k: "Packages", perDistro: (s) => `${s.pkgs} (${s.pkg})` },
@@ -36,8 +36,8 @@ const info: {
 ---
 
 <Layout
-  title="astro-distro"
-  description="astro-distro — Astro + Tailwind fastfetch-style portfolio template"
+  title="NIBIRU E&G"
+  description=""
 >
   <div class="mb-10 flex flex-col items-start md:flex-row gap-6 md:gap-12">
     <DistroLogo />
@@ -45,7 +45,7 @@ const info: {
       <div class="font-medium text-accent mb-1.5">
         <h1 class="inline border-b border-dim pb-0.5">
           {site.author}
-          {site.handle_suffix && (<><span class="text-dim">@</span>{site.handle_suffix}</>)}
+          {site.handle_suffix && (<><span class="text-dim">-</span>{site.handle_suffix}</>)}
         </h1>
       </div>
 

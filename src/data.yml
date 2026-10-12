@@ -1,9 +1,9 @@
 site:
-  title: astro-distro
-  description: Astro + Tailwind fastfetch-style portfolio template. TUI components, themeable systems, projects synced from GitHub via YAML.
+  title: NIBIRU E&G
+  description: A guy making games and entertaining programs
   url: https://example.com
-  author: astro
-  handle_suffix: distro
+  author: nibiru
+  handle_suffix: e&g
   image: /og.png
   image_width: 1200
   image_height: 630
@@ -20,6 +20,10 @@ site:
     errors: 0
     warnings: 0
     uptime: 5y
+info:
+  nibiruname: Emiliano Guzman Celio
+  languagues: C#, GML, C++, Java, HTML, CSS
+  engines: Unity, GameMaker, Godot
 
 current: debian
 booted_at: '2026-08-20T10:00:00Z'
