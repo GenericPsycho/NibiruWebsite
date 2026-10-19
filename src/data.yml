@@ -2,8 +2,8 @@ site:
   title: NIBIRU E&G
   description: A guy making games and entertaining programs
   url: https://example.com
-  author: nibiru
-  handle_suffix: e&g
+  author: NIBIRU
+  handle_suffix: Entertainment & Games
   image: /og.png
   image_width: 1200
   image_height: 630
@@ -14,18 +14,14 @@ site:
   twitter: ''
   locale: en
   type: website
-  default_theme: debian
+  default_theme: kali
   footer:
     status: session closed
     errors: 0
     warnings: 0
     uptime: 5y
-info:
-  nibiruname: Emiliano Guzman Celio
-  languagues: C#, GML, C++, Java, HTML, CSS
-  engines: Unity, GameMaker, Godot
 
-current: debian
+current: kali
 booted_at: '2026-08-20T10:00:00Z'
 host:
   name: devbox
@@ -43,20 +39,16 @@ about:
     modified: 2
     untracked: 0
   bio:
-    - icon: M
-      text: Astro + Tailwind template for fastfetch-style portfolios
-    - icon: M
-      text: Single source of truth — content in YAML, generated in JSON
-    - icon: M
-      text: 26 distro themes, switchable from the header with no flash
-    - icon: M
-      text: Projects synced from GitHub, cached locally for 1 hour
-    - icon: M
-      text: SEO out of the box — OG, Twitter, JSON-LD, robots.txt
-    - icon: M
-      text: TypeScript strict, biome, bun test, GitHub Actions
-    - icon: ??
-      text: Fork this repo and edit data.yml to make it yours
+    - icon: ">"
+      text: I make programs to entertain people, whether minigames, horror blogs,
+    - icon: 
+      text: or interactive Arcana readers, my code plans to give people some fun.
+    - icon: ">"
+      text: I've been working with code for around 5 years, mostly as high-school
+    - icon: 
+      text: projects, later on I partnered with SpaceProject to create a horror
+    - icon: 
+      text: blog called ANALOGIUM.
   paths:
     - name: main
       current: true

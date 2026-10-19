@@ -3,11 +3,12 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const CACHE_DIR = resolve(__dirname, "../../.cache/logos");
+//const CACHE_DIR = resolve(__dirname, "../../.cache/logos");
 
 const BASE_URL =
 	"https://raw.githubusercontent.com/fastfetch-cli/fastfetch/refs/heads/dev/src/logo/ascii/";
 
+	/*
 export async function fetchLogo(distro: string): Promise<string> {
 	const cachePath = resolve(CACHE_DIR, `${distro}.txt`);
 	if (existsSync(cachePath)) {
@@ -17,5 +18,32 @@ export async function fetchLogo(distro: string): Promise<string> {
 	const text = await logo.text();
 	mkdirSync(CACHE_DIR, { recursive: true });
 	writeFileSync(cachePath, text);
+	return text;
+}
+	*/
+
+export async function fetchLogo(distro: string): Promise<string> {
+	const text = `              ++++++++++++
+          +        ++    .++++
+       =          ++++       ++++
+                 ++++++        ++++
+               :+++  +++-        +++
+              +++=    =+++        +++
+             +++.      .+++        +++
+            +++          +++        +++
+           +++            +++       +++:
+          +++              +++       +++
+         ++++++++++++++++++++++      +++
+                  ++++               +++
+                  ++++               +++
+                  ++++              +++:
+             +++++=  =+++++         +++ 
+             ++++++++++++++        +++  
+                  +  +            +++
+                  +  +           +++
+                  +\\/+         ++++
+       =          ++++       ++++
+          +       ++++   .++++
+              ++++++++++++`;
 	return text;
 }
