@@ -1,0 +1,68 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name'
+        required: true
+        default: 'latest-dev'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun run build
+
+      - name: Compress Build Artifact
+        run: tar -czf build.tar.gz -C dist .
+
+      - name: Determine Tag Name
+        id: determine_tag
+        run: |
+          if [ "${{ github.event.inputs.tag }}" != "" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+            echo "name=Manual Build" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref_name }}" == "main" ]; then
+            echo "tag=latest-prod" >> $GITHUB_OUTPUT
+            echo "name=Production Build (latest)" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref_name }}" == "dev" ]; then
+            echo "tag=latest-dev" >> $GITHUB_OUTPUT
+            echo "name=Development Build (latest)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.determine_tag.outputs.tag }}
+          name: ${{ steps.determine_tag.outputs.name }}
+          files: build.tar.gz
+          make_latest: ${{ github.ref_name == 'main' }}
+          draft: false
+          body: |
+            Automated build for branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
