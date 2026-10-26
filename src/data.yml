@@ -106,15 +106,9 @@ contact:
   command: mutt -f user@example.com
   email: user@example.com
   inbox:
-    - from: github.com
-      date: 15 Aug 2024
-      href: https://github.com
-    - from: hello@example.com
-      date: 10 Jan 2025
-      href: mailto:hello@example.com
-    - from: example.com
-      date: 10 Jan 2025
-      href: https://example.com
+    - from: GitHub - Nibiru
+      date: 16 Sep 2025
+      href: https://github.com/Nibiru-EG
   hints:
     - key: j/k
       action: next
