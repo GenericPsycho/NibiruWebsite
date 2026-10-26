@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE_URL =
 	"https://raw.githubusercontent.com/fastfetch-cli/fastfetch/refs/heads/dev/src/logo/ascii/";
 
-	/*
+/*
 export async function fetchLogo(distro: string): Promise<string> {
 	const cachePath = resolve(CACHE_DIR, `${distro}.txt`);
 	if (existsSync(cachePath)) {
