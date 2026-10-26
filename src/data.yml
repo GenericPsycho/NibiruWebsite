@@ -126,6 +126,6 @@ projects_ui:
   command: ranger /home/astro/projects
   root: /nibiru/projects
 projects:
-  - https://analogium.xyz/
+  - https://github.com/AnalogiumOrg/analogium
   - https://github.com/GenericPsycho/NibiruWebsite
   - https://github.com/Nibiru-EG/CyberpunkMexico
