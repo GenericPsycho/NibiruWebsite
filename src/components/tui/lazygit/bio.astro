@@ -21,7 +21,7 @@ const { items } = Astro.props;
   <Content>
     {items.map(item => (
       <Paragraph>
-        <span class="font-medium text-accent" class:list={[item.icon === "??" ? "text-dim" :  ""]}>{item.icon}</span>  <span class:list={[item.icon === "??" ? "" :  "ml-2"]}>{item.text}</span>
+        <span class="font-medium text-accent" class:list={[item.icon === "??" ? "text-dim" :  ""]}>{item.icon}</span>  <span class:list={[item.icon === "??" ? "" :  "ml-2", "[&_a]:text-inherit [&_a]:no-underline [&_a:hover]:text-inherit [&_a:hover]:no-underline"]} set:html={item.text} />
       </Paragraph>
     ))}
   </Content>

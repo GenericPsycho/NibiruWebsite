@@ -46,9 +46,9 @@ about:
     - icon: ">"
       text: I've been working with code for around 5 years, mostly as high-school
     - icon: 
-      text: projects, later on I partnered with SpaceProject to create a horror
+      text: 'projects, later on I partnered with <a href="https://beyondstars.dev" target="_blank" rel="noopener">stargazer</a> to create a horror'
     - icon: 
-      text: blog called ANALOGIUM.
+      text: 'blog called <a href="https://analogium.xyz" target="_blank" rel="noopener">ANALOGIUM</a>.'
   paths:
     - name: main
       current: true
