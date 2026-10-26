@@ -124,8 +124,9 @@ contact:
       action: quit
 projects_ui:
   command: ranger /home/astro/projects
-  root: /nibiru/projects
+  root: /nibiru
 projects:
   - https://github.com/AnalogiumOrg/analogium
   - https://github.com/GenericPsycho/NibiruWebsite
   - https://github.com/Nibiru-EG/CyberpunkMexico
+  - https://github.com/GenericPsycho/TarotReader
