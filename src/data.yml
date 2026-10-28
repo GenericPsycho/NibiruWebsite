@@ -106,13 +106,13 @@ contact:
   command: mutt -f user@example.com
   email: user@example.com
   inbox:
-    - from: GitHub - Nibiru
+    - from: GitHub
       date: 16 Sep 2025
       href: https://github.com/Nibiru-EG
-    - from: E-Mail - nibiru-eg@our-space.xyz
+    - from: nibiru-eg@our-space.xyz
       date: 25 Oct 2026
       href: mailto:nibiru-eg@our-space.xyz
-    - from: LinkedIn - Emiliano Guzmán Celio
+    - from: LinkedIn
       date: 28 Sep 2026
       href: https://www.linkedin.com/in/emiliano-guzm%C3%A1n-celio-8141a143b/
   hints:
